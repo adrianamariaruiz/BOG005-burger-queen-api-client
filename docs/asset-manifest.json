@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BOG005-burger-queen-api-client/static/css/main.7494bf2e.css",
+    "main.js": "/BOG005-burger-queen-api-client/static/js/main.99d895c9.js",
+    "static/media/logo-bq.png": "/BOG005-burger-queen-api-client/static/media/logo-bq.c2c789a2515b5074a0f3.png",
+    "static/media/background-hamburger.png": "/BOG005-burger-queen-api-client/static/media/background-hamburger.cba1369cb002797afcca.png",
+    "index.html": "/BOG005-burger-queen-api-client/index.html",
+    "main.7494bf2e.css.map": "/BOG005-burger-queen-api-client/static/css/main.7494bf2e.css.map",
+    "main.99d895c9.js.map": "/BOG005-burger-queen-api-client/static/js/main.99d895c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7494bf2e.css",
+    "static/js/main.99d895c9.js"
+  ]
+}
