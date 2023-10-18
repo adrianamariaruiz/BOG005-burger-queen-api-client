@@ -7,8 +7,6 @@ import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
-
-
   const navigate = useNavigate();
 
   const logOut = () => {

@@ -26,12 +26,10 @@ const Order = () => {
             const result = await getProducts()
             setProductsOptions(result)
         }
-
         getProductsOption()
     }, [orderList])
 
     const selectOption = (e) => {
-
         const resultFilter = productsOptions.filter((product) => {
             if (e.target.value === product.type) {
                 return true
@@ -97,8 +95,11 @@ const Order = () => {
                 <div className='optionsListContainer'>
                     <select className='optionMenu' onChange={selectOption}>
                         <option value='Seleccione Desayuno/Almuerzo'>Seleccione una opción</option>
-                        <option value='Desayuno'>Desayuno</option>
+                        <option value='Adicion'>Adiciones</option>
+                        <option value='Combos'>Combos</option>
                         <option value='Almuerzo'>Almuerzo</option>
+                        <option value='Desayuno'>Desayuno</option>
+                        <option value='Bebidas'>Bebidas</option>
                     </select>
                     {
                         productsList.map((product, id) => {
@@ -120,6 +121,7 @@ const Order = () => {
                         value={nameClient}
                         required
                         placeholder='Nombre del cliente'
+                        name='nameClient'
                         onChange={handleChange}>
                     </FormInput>
                     <div className='containerProductsAdmin'>

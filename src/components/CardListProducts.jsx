@@ -102,7 +102,7 @@ export const CardListProducts = ({ product, setListProductsTotal }) => {
                     <FormInput
                         className="inputNombreProducto"
                         type='nameNewProduct'
-                        name='name'
+                        name='productName'
                         required
                         placeholder='Nombre del nuevo producto'
                         value={productUpdate.name}
@@ -123,8 +123,6 @@ export const CardListProducts = ({ product, setListProductsTotal }) => {
                         <option value={product.type} disabled>{product.type}</option>
                         <option value='Desayuno'>Desayuno</option>
                         <option value='Almuerzo'>Almuerzo</option>
-                        {/* <option value='Desayuno' selected={product.type === 'Desayuno'}>Desayuno</option>
-                        <option value='Almuerzo' selected={product.type === 'Almuerzo'}>Almuerzo</option> */}
                     </select>
                     <div className='optionsModal'>
                         <Button onClick={updateProductNow} text="Aceptar" className="btnEditAdmonProduct" />

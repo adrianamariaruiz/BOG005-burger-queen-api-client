@@ -113,8 +113,8 @@ const CardListUsers = ({ user, setListUsersTotal }) => {
                         onChange={handleChange}
                     >
                     </FormInput>
-                    <select defaultValue={user.role} className='SelectRolUser' name='role' onChange={handleChange} >
-                        <option value={user.role} disabled>{user.role}</option>
+                    <select value='Selecciona rol' className='SelectRolUser' name='role' onChange={handleChange}>
+                        <option value='Selecciona rol' disabled>Selecciona rol</option>
                         <option value='Mesero' >Mesero</option>
                         <option value='Chef' >Chef</option>
                         <option value='Admin' >Admin</option>

@@ -2,12 +2,12 @@
     width: 50%;
     margin: 0;
     padding: 10px;
+    cursor: pointer;
 }
 
 .optionsListContainer {
     padding-left: 5px;
     width: 98%;
-    /* border: solid 1px rgb(0, 47, 255); */
     text-align: center;
 }
 
@@ -44,7 +44,6 @@
 
 .listProductsContainer p {
     font-size: 14px;
-    /* background-color: blueviolet; */
 }
 
 .listProductsContainer .btnAdd {
@@ -69,7 +68,6 @@
     }
 
     .listProductsOrder {
-        /* border: solid 1px yellow; */
         display: flex;
         justify-content: center;
     }
@@ -114,7 +112,6 @@
     }
 
     .listProductsContainer {
-        /* border: solid 1px yellow; */
         min-height: 90px;
         width: 95%;
     }
@@ -132,6 +129,4 @@
         width: 95px;
         height: 35px;
     }
-
-
 }

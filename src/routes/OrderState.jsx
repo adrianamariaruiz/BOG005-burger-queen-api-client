@@ -11,10 +11,14 @@ import CardOrderStateDelivered from '../components/CardOrderStateDelivered';
 
 const OrderState = () => {
 
+    const userActived = localStorage.getItem('userRole')
     const navegate = useNavigate()
 
     const [orderListPending, setorderListPending] = useState([])
-
+    // const [orderPending, setOrderPending] = useState([])
+    // const [orderDelivering, setOrderDelivering] = useState([])
+    // const [orderDelivered, setOrderDelivered] = useState([])
+    
     useEffect(() => {
         if (orderListPending.length === 0) {
             const viewListOrderPending = async () => {
@@ -25,9 +29,13 @@ const OrderState = () => {
         }
     }, [orderListPending])
 
-    const orderStatusPending = orderListPending.filter((order) => {
-        return order.status === 'pending' && order
-    })
+
+        const orderStatusPending = orderListPending.filter((order) => {
+            return order.status === 'pending' && order
+        })
+        // setOrderPending(orderStatusPending)
+    
+
 
     const orderStatusDelivering = orderListPending.filter((order) => {
         return order.status === 'delivering' && order
@@ -43,11 +51,19 @@ const OrderState = () => {
             <Header />
             <section className='containerOrderState'>
                 <div className='containerBtnP'>
-                    <Button className='btnOrderRow'
-                        onClick={() => { navegate('/order') }}>
-                        <FontAwesomeIcon className='iconArrowOrderState' icon={faCircleArrowLeft} />Realizar Pedido
-                    </Button>
-                    <p>Estado de los Pedidos</p>
+                    <div className='containerBtnBack'>
+                        {
+                            userActived === 'admin' && 
+                                <Button className='btnOrderRow' onClick={() => { navegate('/admin') }}><FontAwesomeIcon className='iconArrow' icon={faCircleArrowLeft} />Inicio</Button>
+                        }
+                        <Button className='btnOrderRow'
+                            onClick={() => { navegate('/order') }}>
+                            <FontAwesomeIcon className='iconArrowOrderState' icon={faCircleArrowLeft} />Realizar Pedido
+                        </Button>
+                    </div>
+                </div>
+                <div className='containerH1'>
+                    <h1>Estado de los Pedidos</h1>
                 </div>
 
                 <div className='containerGridOrderState'>

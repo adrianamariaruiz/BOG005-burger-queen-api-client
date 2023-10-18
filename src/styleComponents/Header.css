@@ -15,8 +15,6 @@
 }
 
 .tittleBQ {
-    /* border: solid 1px rgb(245, 14, 245); */
-    /* line-height: 12px; */
     margin: 5px;
 }
 
@@ -38,9 +36,9 @@
 }
 
 .headerContainer .iconSignOut {
-    /* border-style: solid; */
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 @media all and (min-width: 768px) {

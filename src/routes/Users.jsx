@@ -72,7 +72,7 @@ export const Users = () => {
                                 type='email'
                                 name='email'
                                 required
-                                placeholder='Email Nuevo usuario'
+                                placeholder='Email nuevo usuario'
                                 value={newUser.email}
                                 onChange={handleChange}
                             >
@@ -89,9 +89,9 @@ export const Users = () => {
                             </FormInput>
                             <select defaultValue='Selecciona tipo' className='SelectRolUser' name='role' onChange={handleChange} >
                                 <option value='seleccion tipo' disabled>Selecciona tipo</option>
-                                <option value='Mesero'>Mesero</option>
-                                <option value='Chef'>Chef</option>
-                                <option value='Admin'>Admin</option>
+                                <option value='waiter'>Mesero</option>
+                                <option value='chef'>Chef</option>
+                                <option value='admin'>Admin</option>
                             </select>
                             <section className='sectionBtn'>
                                 <Button text='Agregar' className='btnEnviar'>

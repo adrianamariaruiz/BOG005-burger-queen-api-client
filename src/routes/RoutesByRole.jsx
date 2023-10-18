@@ -28,7 +28,7 @@ const RoutesByRole = () => {
                     : null
             }
             {
-                userActived === 'Mesero'
+                userActived === 'waiter'
                     ? (
                         <Routes>
                             <Route path='/order' element={<Order />}></Route>
@@ -39,7 +39,7 @@ const RoutesByRole = () => {
                     : null
             }
             {
-                userActived === 'Chef'
+                userActived === 'chef'
                     ? (
                         <Routes>
                             <Route path='/orderStateChef' element={<OrderStateChef />}></Route>

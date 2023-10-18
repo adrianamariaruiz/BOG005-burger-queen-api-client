@@ -11,7 +11,6 @@
 }
 
 .containerBtnBack {
-    /* border: solid 1px lightblue; */
     width: 88%;
     margin-top: 10px;
 }
@@ -24,7 +23,6 @@
 }
 
 .containerFormListProducts {
-    /* border: solid 2px rgb(37, 71, 4); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,22 +30,18 @@
 }
 
 .containerFormAddProduct {
-    /* border: solid 2px rgb(140, 228, 52); */
     height: 100%;
     width: 100%;
 }
 
 .containerProductsAdmin {
-    /* border: solid 2px rgb(169, 24, 236); */
     padding-bottom: 20px;
 }
 
 .productsContainer {
-    /* border: solid 2px yellow; */
     text-align: center;
     display: grid;
     min-height: 70px;
-    /* grid-template-columns: 10% 20% 10% 20% 10% 10%; */
     grid-template-columns: 10% 30% 15% 20%;
     justify-content: space-around;
     align-items: center;
@@ -66,11 +60,9 @@
     font-size: 14px;
 }
 
-/* <p> Agregar Producto </p> */
 .pAddProductForm {
     margin-bottom: 5px;
     font-weight: bold;
-    /* border: solid 2px blueviolet; */
 }
 
 .inputCargarImagen,
@@ -86,7 +78,6 @@
 .SelectTypeProduct {
     height: 30px;
     padding-left: 10px;
-    /* background-color: #ED751E; */
     background-color: #F8B62AD9;
     color: rgb(65, 64, 64);
     border-radius: 15px;
@@ -95,7 +86,6 @@
 }
 
 .sectionBtn {
-    /* border: solid 2px blueviolet; */
     margin-top: 10px;
 }
 
@@ -127,7 +117,6 @@
 
 @media all and (min-width: 768px) {
     .containerFormListProducts {
-        /* border: solid 2px rgb(37, 71, 4); */
         width: 90%;
     }
 
@@ -136,15 +125,12 @@
     }
 
     .containerFormAddProduct {
-        /* border: solid 2px rgb(140, 228, 52); */
         display: flex;
         justify-content: center;
     }
 
     .containerProductsAdmin {
         width: 100%;
-        /* border: solid 2px rgb(169, 24, 236); */
-        /* margin-bottom: 10px; */
     }
 
     .productsContainer {
@@ -170,7 +156,6 @@
 @media all and (min-width: 1024px) {
 
     .containerFormListProducts {
-        /* border: solid 2px rgb(37, 71, 4); */
         align-items: flex-start;
         flex-direction: row;
     }
@@ -182,7 +167,5 @@
         height: 40px;
         font-size: 18px; 
     }
-
-
 
 }

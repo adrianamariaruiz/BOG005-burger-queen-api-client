@@ -1,5 +1,4 @@
 /* lista de usuarios */
-
 .usersAll {
     background: url('../resources/background-hamburger.png');
     background-size: contain;
@@ -11,15 +10,8 @@
 }
 
 .divForUsers{
-    /* border: solid 1px rgb(255, 230, 0); */
     width: 100%;
     padding-left: 5px;
-}
-
-.containerBtnBack {
-    /* border: solid 1px lightblue; */
-    width: 88%;
-    margin-top: 10px;
 }
 
 /* texto administrador de productos */
@@ -30,7 +22,6 @@
 }
 
 .containerFormListUsers {
-    /* border: solid 2px rgb(37, 71, 4); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,13 +29,11 @@
 }
 
 .containerFormAddUser {
-    /* border: solid 2px rgb(140, 228, 52); */
     height: 100%;
     width: 100%;
 }
 
 .containerUsersAdmin {
-    /* border: solid 2px rgb(169, 24, 236); */
     padding-bottom: 20px;
     width: 90%;
     display: flex;
@@ -54,7 +43,6 @@
 }
 
 .usersContainer {
-    /* border: solid 2px rgb(14, 194, 226); */
     text-align: center;
     display: grid;
     height: 120px;
@@ -68,14 +56,12 @@
 
 .usersContainer p {
     font-size: 16px;
-    /* border: solid 2px rgb(21, 226, 14); */
 }
 
 /* <p> Agregar Producto </p> */
 .uAddUserForm {
     margin-bottom: 5px;
     font-weight: bold;
-    /* border: solid 2px rgb(46, 43, 226); */
 }
 
 .inputEmailUser,
@@ -90,7 +76,6 @@
 .SelectRolUser {
     height: 30px;
     padding-left: 10px;
-    /* background-color: #ED751E; */
     background-color: #F8B62AD9;
     color: rgb(65, 64, 64);
     border-radius: 15px;
@@ -99,7 +84,6 @@
 }
 
 .sectionBtn {
-    /* border: solid 2px blueviolet; */
     margin-top: 10px;
 }
 
@@ -151,7 +135,6 @@
     }
 
     .containerFormListUsers {
-        /* border: solid 2px rgb(37, 71, 4); */
         width: 90%;
     }
 
@@ -196,7 +179,6 @@
 @media all and (min-width: 1024px) {
 
     .containerFormListUsers {
-        /* border: solid 2px rgb(37, 71, 4); */
         align-items: flex-start;
         flex-direction: row;
     }
@@ -217,6 +199,4 @@
         height: 40px;
         font-size: 18px;
     }
-
-
 }

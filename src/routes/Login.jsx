@@ -28,9 +28,9 @@ const Login = () => {
         loginUser(inputEmail, inputPassword).then(res => {
             if (res.data.user.role === 'admin') {
                 navegate('/admin')
-            } else if (res.data.user.role === 'Mesero') {
+            } else if (res.data.user.role === 'waiter') {
                 navegate('/order')
-            } else if (res.data.user.role === 'Chef') {
+            } else if (res.data.user.role === 'chef') {
                 navegate('/orderStateChef')
             }
         })
@@ -64,6 +64,7 @@ const Login = () => {
                     required
                     placeholder='Ingresa tu Email'
                     className='emailInput'
+                    name='emailLogin'
                     label='Email'
                     data-testid='login-email-input'>
                 </FormInput>
@@ -73,6 +74,7 @@ const Login = () => {
                     onChange={handleInputChangePassword}
                     required
                     placeholder='Ingresa tu contraseña'
+                    name='passwordLogin'
                     label='Contraseña'
                     data-testid='login-password-input'>
                 </FormInput>

@@ -4,8 +4,6 @@ const baseUrl = process.env.REACT_APP_API_URL;
 let token = localStorage.getItem('tokenUser')
 let userId = localStorage.getItem('userId')
 
-//const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY2NzE2NTk1OSwiZXhwIjoxNjY3MTY5NTU5LCJzdWIiOiIyIn0.RqYLrbO8Psp6CRGgMAIHveLD8plFy4lrdBHzlyTYSXY'
-
 const loginUser = async (email, password) => {
     const rest = await axios({
         method: 'POST',
@@ -26,7 +24,6 @@ const loginUser = async (email, password) => {
 }
 
 export const getProducts = async () => {
-
     const res = await axios({
         method: 'GET',
         url: baseUrl + '/products',
@@ -63,8 +60,6 @@ export const editProduct = async (objectProduct, idProduct) => {
     });
     return res
 };
-
-
 
 export const deleteProduct = async (objectProduct, idProduct) => {
     const res = await axios({
@@ -112,7 +107,6 @@ export const deleteUser = async (objectUser, idUser) => {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token,
         },
-        // data: objectUser
     });
     return res
 };
@@ -203,7 +197,5 @@ export const deleteOrderPending = async (orderId) => {
     });
     return res
 };
-
-
 
 export default loginUser

@@ -1,5 +1,4 @@
 .containerBtnAdmin {
-    /* border: solid 1px pink; */
     min-height: 200px;
     width: 98%;
 }
@@ -31,7 +30,6 @@
 
 @media all and (min-width: 768px) {
     .containerBtnAdmin {
-        /* border: solid 1px pink; */
         width: 70%;
     }
 
@@ -49,7 +47,6 @@
 
 @media all and (min-width: 1024px) {
     .containerBtnAdmin {
-        /* border: solid 1px pink; */
         width: 40%;
     }
 
