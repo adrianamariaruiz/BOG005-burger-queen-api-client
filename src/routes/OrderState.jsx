@@ -15,9 +15,6 @@ const OrderState = () => {
     const navegate = useNavigate()
 
     const [orderListPending, setorderListPending] = useState([])
-    // const [orderPending, setOrderPending] = useState([])
-    // const [orderDelivering, setOrderDelivering] = useState([])
-    // const [orderDelivered, setOrderDelivered] = useState([])
     
     useEffect(() => {
         if (orderListPending.length === 0) {
@@ -30,13 +27,10 @@ const OrderState = () => {
     }, [orderListPending])
 
 
-        const orderStatusPending = orderListPending.filter((order) => {
-            return order.status === 'pending' && order
-        })
-        // setOrderPending(orderStatusPending)
+    const orderStatusPending = orderListPending.filter((order) => {
+        return order.status === 'pending' && order
+    })
     
-
-
     const orderStatusDelivering = orderListPending.filter((order) => {
         return order.status === 'delivering' && order
     })

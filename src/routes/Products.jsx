@@ -6,7 +6,7 @@ import FormInput from '../components/FormInput'
 import Button from '../components/Button'
 import { useForm } from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 
@@ -60,7 +60,7 @@ export const Products = () => {
             <Header />
             <section className='productsAll'>
                 <div className='containerBtnBack'>
-                    <Button className='btnStateOrder' text='Inicio' onClick={() => { navegate('/admin') }}><FontAwesomeIcon className='iconArrow' icon={faCircleArrowRight} /></Button>
+                    <Button className='btnOrderRow' onClick={() => { navegate('/admin') }}><FontAwesomeIcon className='iconArrow' icon={faCircleArrowLeft} />Inicio</Button>
                 </div>
                 <h3>Administración de productos</h3>
 

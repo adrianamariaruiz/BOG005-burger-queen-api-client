@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Button from '../components/Button'
 import FormInput from '../components/FormInput'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
 import { createUserPost, getUsers } from '../helpers/axios';
 import Swal from 'sweetalert2'
@@ -18,7 +18,6 @@ export const Users = () => {
     const [newUser, setNewUser] = useState({ email: "", password: "", role: "" })
 
     useEffect(() => {
-        // todo lo que este aca se ejecutara desde el inicio de la app
         if (listUsersTotal.length === 0) {
             getUsers().then(res => {
                 setListUsersTotal(res)
@@ -59,7 +58,7 @@ export const Users = () => {
             <Header />
             <section className='usersAll'>
                 <div className='containerBtnBack'>
-                    <Button className='btnStateOrder' text='Inicio' onClick={() => { navegate('/admin') }}><FontAwesomeIcon className='iconArrow' icon={faCircleArrowRight} /></Button>
+                    <Button className='btnOrderRow' onClick={() => { navegate('/admin') }}><FontAwesomeIcon className='iconArrow' icon={faCircleArrowLeft} />Inicio</Button>
                 </div>
                 <h3>Administración de personal</h3>
 
