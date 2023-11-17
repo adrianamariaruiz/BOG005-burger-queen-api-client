@@ -87,7 +87,7 @@ const CardListUsers = ({ user, setListUsersTotal }) => {
                 <p>{user.role}</p>
             </div>
             <div className='btnContainerUsers'>
-                <Button className='btnEditAdmonUsers' text='Edit' onClick={handleEdit} />
+                <Button className='btn btnEdit' text='Editar' onClick={handleEdit} />
                 <Modal
                     isOpen={openModal}
                     closeModal={closeModal}
@@ -114,18 +114,20 @@ const CardListUsers = ({ user, setListUsersTotal }) => {
                     >
                     </FormInput>
                     <select value='Selecciona rol' className='SelectRolUser' name='role' onChange={handleChange}>
-                        <option value='Selecciona rol' disabled>Selecciona rol</option>
+                        <option value='Selecciona rol'>Selecciona rol</option>
                         <option value='Mesero' >Mesero</option>
                         <option value='Chef' >Chef</option>
                         <option value='Admin' >Admin</option>
                     </select>
                     <div className='optionsModal'>
-                        <Button onClick={updateUsertNow} text="Aceptar" className="btnEditAdmonUserModal" />
-                        <Button onClick={closeModal} text="Cancelar" className="btnEditDeleteUser" />
+                        <div className='btnContOrderState'>
+                            <Button onClick={updateUsertNow} text="Aceptar" className="btn btnEdit" />
+                            <Button onClick={closeModal} text="Cancelar" className="btn btnDelete" />
+                        </div>
                     </div>
 
                 </Modal>
-                <Button className='btnEditDeleteUser' text='Elim' onClick={handleDelete} />
+                <Button className='btn btnDelete' text='Eliminar' onClick={handleDelete} />
             </div>
         </>
     )

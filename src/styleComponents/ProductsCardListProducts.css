@@ -95,26 +95,6 @@
     margin-top: -20px;
 }
 
-.btnEditAdmonProduct {
-    color: black;
-    width: 60px;
-    height: 30px;
-    background-color: #BCE402;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 5px;
-}
-
-.btnEditDeleteProduct {
-    color: white;
-    width: 60px;
-    height: 30px;
-    background-color: #FF0606;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 5px;
-}
-
 @media all and (min-width: 768px) {
     .containerFormListProducts {
         width: 90%;
@@ -145,12 +125,6 @@
         font-size: 20px;
     }
 
-    .btnEditDeleteProduct,
-    .btnEditAdmonProduct {
-        width: 80px;
-        height: 35px;
-        margin-right: 10px;
-    }
 }
 
 @media all and (min-width: 1024px) {

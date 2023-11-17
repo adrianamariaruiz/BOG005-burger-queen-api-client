@@ -8,6 +8,7 @@ import './styleComponents/Administration.css';
 import './styleComponents/OrderState.css';
 import './styleComponents/Modal.css';
 import './styleComponents/Users.css';
+import './styleComponents/BtnStyle.css';
 
 import './App.css';
 

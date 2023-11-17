@@ -47,20 +47,6 @@
     width: 95%;
 }
 
-.btnStyleLogin {
-    width: 150px;
-    height: 30px;
-    margin-top: 10px;
-    background-color: #F8B62A;
-    border-radius: 15px;
-    border-style: none;
-    cursor: pointer;
-}
-
-.btnStyleLogin:hover {
-    background-color: #ac7e1d;
-}
-
 @media all and (min-width: 768px) {
     .App-logo {
         width: 250px;
@@ -69,13 +55,6 @@
     .formLogin input {
         width: 50%;
         height: 35px;
-    }
-
-    .btnStyleLogin {
-        width: 220px;
-        height: 40px;
-        font-size: 18px;
-        font-weight: bold;
     }
 }
 
@@ -99,10 +78,4 @@
         font-size: 26px;
     }
 
-    .btnStyleLogin {
-        width: 250px;
-        height: 45px;
-        font-size: 24px;
-        font-weight: bold;
-    }
 }

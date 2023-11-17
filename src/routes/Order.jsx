@@ -81,7 +81,7 @@ const Order = () => {
         <section className='order'>
             <Header />
             <Button
-                className='btnStateOrder'
+                className='btn btnStateOrder'
                 onClick={() => { navegate('/orderState') }}
                 text='Estado Pedidos'
             >
@@ -141,8 +141,8 @@ const Order = () => {
                         <p>${totalPrice}</p>
                     </div>
                     <section className='sectionBtn'>
-                        <Button text='Enviar' className='btnEnviar' ></Button>
-                        <Button text='Cancelar' className='btnCancel'></Button>
+                        <Button text='Enviar' className='btn btnSend' ></Button>
+                        <Button text='Cancelar' className='btn btnCancel'></Button>
                     </section>
 
                 </form>

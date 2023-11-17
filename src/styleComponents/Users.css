@@ -93,36 +93,6 @@
     margin-top: -20px;
 }
 
-.btnEditAdmonUsers {
-    color: black;
-    width: 60px;
-    height: 30px;
-    background-color: #BCE402;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 5px;
-}
-
-.btnEditDeleteUser {
-    color: white;
-    width: 60px;
-    height: 30px;
-    background-color: #ff0606;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 5px;
-}
-
-.btnEditAdmonUserModal {
-    color: black;
-    width: 60px;
-    height: 30px;
-    background-color: #BCE402;
-    border-radius: 15px;
-    border-style: none;
-    margin-right: 5px;
-}
-
 @media all and (min-width: 768px) {
 
     .usersContainer {
@@ -163,17 +133,6 @@
     .SelectRolUser {
         height: 40px;
     }
-
-    .btnEditAdmonUsers {
-        width: 95px;
-        height: 40px;
-    }
-
-    .btnEditDeleteUser {
-        width: 95px;
-        height: 40px;
-        margin-right: 10px;
-    }
 }
 
 @media all and (min-width: 1024px) {
@@ -184,12 +143,6 @@
     }
 
     .usersContainer p {
-        font-size: 16px;
-    }
-
-    .btnEditAdmonUsers, .btnEditDeleteUser {
-        width: 90px;
-        height: 40px;
         font-size: 16px;
     }
 

@@ -83,7 +83,7 @@ export const CardListProducts = ({ product, setListProductsTotal }) => {
                 <p>{product.type}</p>
             </div>
             <div className='btnContainerProducts'>
-                <Button className='btnEditAdmonProduct' text='Edit' onClick={handleEdit} />
+                <Button className='btn btnEdit' text='Editar' onClick={handleEdit} />
                 <Modal
                     isOpen={openModal}
                     closeModal={closeModal}
@@ -125,12 +125,12 @@ export const CardListProducts = ({ product, setListProductsTotal }) => {
                         <option value='Almuerzo'>Almuerzo</option>
                     </select>
                     <div className='optionsModal'>
-                        <Button onClick={updateProductNow} text="Aceptar" className="btnEditAdmonProduct" />
-                        <Button onClick={closeModal} text="Cancelar" className="btnEditDeleteProduct" />
+                        <Button onClick={updateProductNow} text="Aceptar" className="btn btnEdit" />
+                        <Button onClick={closeModal} text="Cancelar" className="btn btnDelete" />
                     </div>
 
                 </Modal>
-                <Button className='btnEditDeleteProduct' text='Elim' onClick={handleDelete} />
+                <Button className='btn btnDelete' text='Eliminar' onClick={handleDelete} />
             </div>
         </>
     )

@@ -1,7 +1,9 @@
-.btnStyle {
-  width: 150px;
-  height: 30px;
-  background-color: #F8B62A;
+.btn{
+  min-width: 60px;
+  min-height: 30px;
+  font-weight: 600;
   border-radius: 15px;
   border-style: none;
+  margin-right: 5px;
+  cursor: pointer;
 }

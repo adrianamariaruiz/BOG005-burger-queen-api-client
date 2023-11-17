@@ -4,25 +4,6 @@
     min-height: 100vh;
 }
 
-.btnStateOrder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: bold;
-    height: 30px;
-    background-color: #BCE402;
-    border-radius: 25px;
-    border-style: none;
-    padding: 10px;
-    margin: 15px;
-    cursor: pointer;
-}
-
-.btnStateOrder:hover {
-    border: solid 2px #92b301;
-}
-
 .iconArrow {
     padding-right: 10px;
     margin-left: 5px;
@@ -164,32 +145,7 @@ input:focus {
     margin-top: 20px;
 }
 
-.formOrder .btnEnviar, .formOrder .btnCancel{
-    margin: 5px;
-    width: 120px;
-    height: 30px;
-    border-radius: 15px;
-    border-style: none;
-    cursor: pointer;
-}
-
-.formOrder .btnEnviar {
-    background-color: #BCE402;
-}
-
-.formOrder .btnCancel {
-    color: white;
-    background-color: #FF0606;
-}
-
 @media all and (min-width: 768px) {
-
-    .btnStateOrder {
-        font-size: 18px;
-        font-weight: bold;
-        width: 200px;
-        height: 40px;
-    }
 
     .iconArrow {
         font-size: 25px;
@@ -220,13 +176,6 @@ input:focus {
         font-size: 18px;
     }
 
-    .formOrder .btnEnviar,
-    .formOrder .btnCancel {
-        width: 150px;
-        height: 35px;
-        font-size: 20px;
-    }
-
     .containerPCO {
         height: 60px;
     }
@@ -237,13 +186,6 @@ input:focus {
 }
 
 @media all and (min-width: 1024px) {
-
-    .btnStateOrder {
-        font-size: 20px;
-        font-weight: bold;
-        width: 210px;
-        height: 45px;
-    }
 
     .formOrder {
         width: 90%;
@@ -263,7 +205,6 @@ input:focus {
 
     .formAddProduct {
         width: 100%;
-
     }
 
     .containerProductOrder {
@@ -280,13 +221,6 @@ input:focus {
 
     .totalPrice p {
         font-size: 20px;
-    }
-
-    .formOrder .btnEnviar,
-    .formOrder .btnCancel {
-        width: 160px;
-        height: 40px;
-        font-weight: bold;
     }
 
     .formOrder p {

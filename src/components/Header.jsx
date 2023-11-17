@@ -20,7 +20,7 @@ const Header = () => {
       <TittleBQ />
 
       <Button
-        className='btnStyle'
+        className='btn btnStyle'
         type='button'
         onClick={logOut}
       >

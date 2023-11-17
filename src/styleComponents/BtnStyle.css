@@ -1,0 +1,92 @@
+.btnStyle {
+    width: 150px;
+    background-color: #F8B62A;
+  }
+  
+  .btnStyleLogin {
+    width: 150px;
+    margin-top: 10px;
+    background-color: #F8B62A;
+  }
+  
+  .btnStyleLogin:hover {
+    background-color: #ac7e1d;
+  }
+  
+  .btnStateOrder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BCE402;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 15px;
+  }
+  
+  .btnStateOrder:hover {
+    border: solid 2px #92b301;
+  }
+  
+  .btnEdit, .btnSend {
+    color: black;
+    background-color: #BCE402;
+  }
+  .btnEdit:hover, .btnSend:hover {
+    background-color: #95b601;
+  }
+  
+  .btnDelete, .btnCancel {
+    color: white;
+    background-color: #FF0606;
+  }
+  .btnDelete:hover, .btnCancel:hover{
+    background-color: #b30000;
+  }
+  
+  @media all and (min-width: 768px) {
+    .btnSend, .btnCancel {
+        width: 150px;
+        height: 35px;
+        font-size: 20px;
+    }
+  
+    .btnStyleLogin {
+      width: 220px;
+      height: 40px;
+      font-size: 18px;
+    }
+
+    
+    .btnDelete,
+    .btnEdit {
+        width: 80px;
+        height: 35px;
+        margin-right: 10px;
+    }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .btnSend, .btnCancel {
+        width: 160px;
+        height: 40px;
+    }
+  
+    .btnEdit, .btnDelete {
+      width: 90px;
+      height: 40px;
+      font-size: 16px;
+    }
+  
+    .btnStyleLogin {
+      width: 250px;
+      height: 45px;
+      font-size: 24px;
+    }
+
+    .btnStateOrder {
+        font-size: 20px;
+        width: 210px;
+        height: 45px;
+    }
+  }
+  

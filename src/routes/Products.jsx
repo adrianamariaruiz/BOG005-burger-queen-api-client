@@ -107,9 +107,9 @@ export const Products = () => {
                             </select>
 
                             <section className='sectionBtn'>
-                                <Button text='Agregar' className='btnEnviar'>
+                                <Button text='Agregar' className='btn btnSend'>
                                 </Button>
-                                <Button text='Cancelar' className='btnCancel'>
+                                <Button text='Cancelar' className='btn btnCancel'>
                                 </Button>
                             </section>
                         </form>

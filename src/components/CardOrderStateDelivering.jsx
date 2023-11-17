@@ -1,13 +1,35 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import Button from './Button';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { changeOrderToDelivered } from '../helpers/axios';
+import { faCheck, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { changeOrderToDelivered, deleteOrderPending } from '../helpers/axios';
 
-const CardOrderStateDelivering = ({order}) => {
+const CardOrderStateDelivering = ({order, setorderListPending}) => {
 
-const sendToDelivered=  async () => {
+const sendToDelivered =  async() => {
+  console.log(order)
+  setorderListPending((currentState)=>{
+    const updateState = currentState.map( (theOrderState) => {
+      if( theOrderState.id === order.id && theOrderState.status === "delivering" ){
+        return {
+          ...theOrderState, status: "delivered"
+        }
+      }
+      return theOrderState
+    } )
+    return updateState
+  })
  await changeOrderToDelivered(order.id)
+}
+
+const orderDeliveringDelete = async() => {
+  setorderListPending(( currentState )=>{
+    const updateDeleted = currentState.filter( (theOrderState) => {
+        return theOrderState.id !== order.id
+    })
+    return updateDeleted
+  })
+  await deleteOrderPending(order.id)
 }
 
   return (
@@ -28,10 +50,15 @@ const sendToDelivered=  async () => {
         <div className="divTime">
           <p>{order.dataEntry}</p>
         </div>
-        <div className="divCheck">
-          <Button>
-            <FontAwesomeIcon icon={faCheck} onClick={sendToDelivered} />
-          </Button>
+        <div className='btnContOrderState'>
+          <div className="divCheck">
+            <Button>
+              <FontAwesomeIcon icon={faCheck} onClick={sendToDelivered} />
+            </Button>
+          </div>
+          <div className='divCheckRed'>
+              <Button onClick={orderDeliveringDelete}><FontAwesomeIcon icon={faTrashCan}/></Button>
+          </div>
         </div>
       </div>
     </>

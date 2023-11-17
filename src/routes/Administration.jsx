@@ -1,7 +1,7 @@
 // import React, { useEffect } from 'react'
 import Button from "../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faHamburger, faList, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 
@@ -29,7 +29,7 @@ const Administration = () => {
               navegate("/products");
             }}
           >
-            <FontAwesomeIcon className="iconUsers" icon={faUsers} />
+            <FontAwesomeIcon className="iconUsers" icon={faHamburger} />
             Administración de productos
           </Button>
 
@@ -39,7 +39,7 @@ const Administration = () => {
               navegate("/orderState");
             }}
           >
-            <FontAwesomeIcon className="iconUsers" icon={faUsers} />
+            <FontAwesomeIcon className="iconUsers" icon={faList} />
             Administración de pedidos
           </Button>
         </div>

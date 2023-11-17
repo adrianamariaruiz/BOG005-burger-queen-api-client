@@ -78,7 +78,7 @@ const Login = () => {
                     label='Contraseña'
                     data-testid='login-password-input'>
                 </FormInput>
-                <Button text='Ingresar' className='btnStyleLogin'>
+                <Button text='Ingresar' className='btn btnStyleLogin'>
                 </Button>
                 <p>{errorLogin}</p>
             </form>

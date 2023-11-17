@@ -1,6 +1,20 @@
 import React from 'react'
+import Button from './Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { deleteOrderPending } from '../helpers/axios';
 
-const CardOrderStateDelivered = ({order}) => {
+const CardOrderStateDelivered = ({order, setorderListPending}) => {
+
+  const orderDeliveredDelete = async() => {
+    setorderListPending(( currentState )=>{
+      const updateDeleted = currentState.filter( (theOrderState) => {
+          return theOrderState.id !== order.id
+      })
+      return updateDeleted
+    })
+    await deleteOrderPending(order.id)
+  }
 
   return (
     <>
@@ -14,13 +28,15 @@ const CardOrderStateDelivered = ({order}) => {
                 <p>{product.product.name}</p>
                 <p>{product.qty}</p>
               </div>
-            );
+            )
           })}
         </div>
         <div className="divTime">
           <p>{order.dataEntry}</p>
         </div>
-        <div className="divCheck"></div>
+        <div className="divCheckRed">
+            <Button onClick={orderDeliveredDelete}><FontAwesomeIcon icon={faTrashCan}/></Button>
+        </div>
       </div>
     </>
   );

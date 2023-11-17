@@ -5,13 +5,30 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { changeOrderToDelivering, deleteOrderPending } from '../helpers/axios';
 
-const CardOrderState = ({ order }) => {
+const CardOrderState = ({ order, setorderListPending }) => {
 
-  const sendToDelivering = async () => {
+  const sendToDelivering = async() => {
+    setorderListPending(( currentState )=>{
+      const updateState = currentState.map((theOrderState) => {
+        if(theOrderState.id === order.id && theOrderState.status === "pending"){
+          return {
+            ...theOrderState, status: "delivering"
+          }
+        }
+        return theOrderState
+      })
+      return updateState
+    })
     await changeOrderToDelivering(order.id)
   }
 
-  const orderPendingDelete = async () => {
+  const orderPendingDelete = async() => {
+    setorderListPending(( currentState )=>{
+      const updateDeleted = currentState.filter( (theOrderState) => {
+          return theOrderState.id !== order.id
+      })
+      return updateDeleted
+    })
     await deleteOrderPending(order.id)
   }
 
@@ -39,12 +56,13 @@ const CardOrderState = ({ order }) => {
         </div>
         <div className='btnContOrderState'>
           <div className='divCheck'>
-            <Button><FontAwesomeIcon icon={faCheck} onClick={sendToDelivering} /></Button>
+            <Button onClick={sendToDelivering}><FontAwesomeIcon icon={faCheck} /></Button>
           </div>
           <div className='divCheckRed'>
-            <Button><FontAwesomeIcon icon={faTrashCan} onClick={orderPendingDelete} /></Button>
+            <Button onClick={orderPendingDelete}><FontAwesomeIcon icon={faTrashCan}/></Button>
           </div>
         </div>
+
       </div>
     </>
   );

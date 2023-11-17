@@ -87,15 +87,15 @@ export const Users = () => {
                             >
                             </FormInput>
                             <select defaultValue='Selecciona tipo' className='SelectRolUser' name='role' onChange={handleChange} >
-                                <option value='seleccion tipo' disabled>Selecciona tipo</option>
+                                <option value='Selecciona tipo' disabled>Selecciona tipo</option>
                                 <option value='waiter'>Mesero</option>
                                 <option value='chef'>Chef</option>
                                 <option value='admin'>Admin</option>
                             </select>
                             <section className='sectionBtn'>
-                                <Button text='Agregar' className='btnEnviar'>
+                                <Button text='Agregar' className='btn btnSend'>
                                 </Button>
-                                <Button text='Cancelar' className='btnCancel'>
+                                <Button text='Cancelar' className='btn btnCancel'>
                                 </Button>
                             </section>
                         </form>

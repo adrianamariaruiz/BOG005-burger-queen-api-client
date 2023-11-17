@@ -68,8 +68,9 @@ const OrderState = () => {
                             return (
                                 <div key={id}>
                                     <CardOrderState
-                                        order={order}>
-                                    </CardOrderState>
+                                        order={order}
+                                        setorderListPending={setorderListPending}
+                                    />
                                 </div>
                             )
                         })}
@@ -82,6 +83,7 @@ const OrderState = () => {
                                 <div key={id}>
                                     <CardOrderStateDelivering
                                         order={order}
+                                        setorderListPending={setorderListPending}
                                     />
                                 </div>
                             )
@@ -95,6 +97,7 @@ const OrderState = () => {
                                 <div key={id}>
                                     <CardOrderStateDelivered
                                         order={order}
+                                        setorderListPending={setorderListPending}
                                     />
                                 </div>
                             )
