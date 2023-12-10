@@ -119,11 +119,18 @@ export const CardListProducts = ({ product, setListProductsTotal }) => {
                         onChange={handleChange}
                     >
                     </FormInput>
-                    <select defaultValue={product.type} name='type' onChange={handleChange} className="SelectTypeProduct">
+                    <select defaultValue={product.type} className='SelectTypeProduct' name='type' onChange={handleChange} aria-label = 'type'>
                         <option value={product.type} disabled>{product.type}</option>
                         <option value='Desayuno'>Desayuno</option>
                         <option value='Almuerzo'>Almuerzo</option>
+                        <option value='Bebida'>Bebida</option>
+                        <option value='Adicion'>Adicion</option>
                     </select>
+                    {/* <select defaultValue={product.type} name='type' onChange={handleChange} className="SelectTypeProduct">
+                        <option value={product.type} disabled>{product.type}</option>
+                        <option value='Desayuno'>Desayuno</option>
+                        <option value='Almuerzo'>Almuerzo</option>
+                    </select> */}
                     <div className='optionsModal'>
                         <Button onClick={updateProductNow} text="Aceptar" className="btn btnEdit" />
                         <Button onClick={closeModal} text="Cancelar" className="btn btnDelete" />

@@ -4,6 +4,8 @@
     <img width="60%" src="./src/resources/logo-bq-black.png">
 </p>
 
+## En este Loom lo puedes ver funcionando: [Click aqui para ver el video](https://www.loom.com/share/ec362af87f0f4995995b564e60dfcd06?sid=7977b9d4-8633-40c4-bea6-ebc141ffecb7)
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)

@@ -45,7 +45,7 @@ const CardProductsOrder = ({ productSelect, setOrderList, orderList }) => {
         <p className='pControl'>{productSelect.qty}</p>
         <Button type="button" text='+' className='btnAdd' onClick={() => addQuantityProduct()} />
       </div>
-      <div className='btnDelete'>
+      <div>
         <Button type="button" className='trashContainer' onClick={productDelete}><FontAwesomeIcon icon={faTrash} /></Button>
       </div>
     </div>

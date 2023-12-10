@@ -13,6 +13,7 @@ const Login = () => {
     const [inputEmail, setInputEmail] = useState('')
     const [inputPassword, setInputPassword] = useState('')
     const [errorLogin, setErrorLogin] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleInputChangeEmail = (e) => {
         const text = e.target.value
@@ -25,6 +26,8 @@ const Login = () => {
     }
 
     const validateUser = () => {
+        setLoading(true)
+        console.log(loading, "loading en true por aca")
         loginUser(inputEmail, inputPassword).then(res => {
             if (res.data.user.role === 'admin') {
                 navegate('/admin')
@@ -34,29 +37,38 @@ const Login = () => {
                 navegate('/orderStateChef')
             }
         })
-            .catch((error) => {
-
-                if (error.response.data === 'Email and password are required') {
-                    setErrorLogin('Ingresa email y contraseña ')
-                }
-                else if (error.response.data === 'Cannot find user') {
-                    setErrorLogin('Usuario no encontrado')
-                }
-                else if (error.response.data === 'Email format is invalid') {
-                    setErrorLogin('Intruduce email valido')
-                }
-                else if (error.response.data === 'Incorrect password') {
-                    setErrorLogin('Contraseña invalida')
-                }
-                else if (error.response.data === 'Password is too short') {
-                    setErrorLogin('Introduce contraseña valida')
-                }
-            })
+        .catch((error) => {
+            if (error.response.data === 'Email and password are required') {
+                setErrorLogin('Ingresa email y contraseña ')
+            }
+            else if (error.response.data === 'Cannot find user') {
+                setErrorLogin('Usuario no encontrado')
+            }
+            else if (error.response.data === 'Email format is invalid') {
+                setErrorLogin('Intruduce email valido')
+            }
+            else if (error.response.data === 'Incorrect password') {
+                setErrorLogin('Contraseña invalida')
+            }
+            else if (error.response.data === 'Password is too short') {
+                setErrorLogin('Introduce contraseña valida')
+            }
+        })
+        .finally(( ) => {
+            setLoading(false)
+            console.log(loading, "loading en false por aca")
+        })
     }
 
     return (
         <section className="App">
             <img src={logo} className="App-logo" alt="logo" />
+            {
+                loading &&
+                <div className='loading'>
+                    <div className='loader'></div>
+                </div>
+            }
             <form typeof='submit' className='formLogin' autoComplete="on" onSubmit={handleSubmit(validateUser)}>
                 <FormInput
                     type='email'

@@ -35,14 +35,14 @@
     background-color: #95b601;
   }
   
-  .btnDelete, .btnCancel {
+  .btnCancel, .btnDelete {
     color: white;
     background-color: #FF0606;
   }
-  .btnDelete:hover, .btnCancel:hover{
+  .btnCancel:hover, .btnDelete:hover{
     background-color: #b30000;
   }
-  
+
   @media all and (min-width: 768px) {
     .btnSend, .btnCancel {
         width: 150px;
@@ -57,7 +57,12 @@
     }
 
     
-    .btnDelete,
+    .btnDelete{
+      width: 60px;
+      height: 35px;
+      margin-right: 5px;
+    }
+
     .btnEdit {
         width: 80px;
         height: 35px;

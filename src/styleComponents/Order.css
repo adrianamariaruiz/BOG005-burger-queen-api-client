@@ -130,6 +130,10 @@ input:focus {
     cursor: pointer;
 }
 
+.trashContainer:hover{
+    background-color: #ad0303;
+}
+
 .totalPrice {
     display: flex;
     background-color: #F8B62A;
