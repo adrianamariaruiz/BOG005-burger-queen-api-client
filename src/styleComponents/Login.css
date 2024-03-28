@@ -12,6 +12,42 @@
     align-items: center;
     justify-content: center;
     color: white;
+    position: relative;
+}
+
+.stick__container{
+    position: absolute;
+    top: 25%;
+    right: 24%;
+}
+
+.stick__login--container{
+    width: 120px;
+    height: 150px;
+    background-color: #fdc64e;
+    overflow: hidden;
+    padding: 1em 1.5em;
+    position: relative;
+}
+
+.stick__login--container::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    border-width: 0 45px 45px 0;
+    border-style: solid;
+    border-color:#000 #caca83 #000  #000;
+    background:658E15;
+    transform: rotate(90deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.stick__login--credentials{
+    color: black;
+    font-size: 11px;
+    padding-top: 25px;
+    font-weight: bold;
 }
 
 .formLogin {

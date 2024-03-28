@@ -57,40 +57,52 @@ const Login = () => {
   return (
     <section className="App">
       <img src={logo} className="App-logo" alt="logo" />
+
       {loading ? (
         <div className="loading">
           <div className="loader"></div>
         </div>
       ) : (
-        <form
-          typeof="submit"
-          className="formLogin"
-          autoComplete="on"
-          onSubmit={handleSubmit(validateUser)}
-        >
-          <FormInput
-            type="email"
-            onChange={handleInputChangeEmail}
-            required
-            placeholder="Ingresa tu Email"
-            className="emailInput"
-            name="emailLogin"
-            label="Email"
-            data-testid="login-email-input"
-          ></FormInput>
-          <FormInput
-            className="passwordInput"
-            type="password"
-            onChange={handleInputChangePassword}
-            required
-            placeholder="Ingresa tu contraseña"
-            name="passwordLogin"
-            label="Contraseña"
-            data-testid="login-password-input"
-          ></FormInput>
-          <Button text="Ingresar" className="btn btnStyleLogin"></Button>
-          <p>{errorLogin}</p>
-        </form>
+        <>
+          <div className="stick__container">
+            <div className="stick__login--container">
+              <div className="stick__login--credentials">
+                <p>Prueba con el perfil de mesero:</p>
+                <p>Usuario: diana.trujillo@systers.xyz</p>
+                <p>Contraseña: 123456</p>
+              </div>
+            </div>
+          </div>
+          <form
+            typeof="submit"
+            className="formLogin"
+            autoComplete="on"
+            onSubmit={handleSubmit(validateUser)}
+          >
+            <FormInput
+              type="email"
+              onChange={handleInputChangeEmail}
+              required
+              placeholder="Ingresa tu Email"
+              className="emailInput"
+              name="emailLogin"
+              label="Email"
+              data-testid="login-email-input"
+            ></FormInput>
+            <FormInput
+              className="passwordInput"
+              type="password"
+              onChange={handleInputChangePassword}
+              required
+              placeholder="Ingresa tu contraseña"
+              name="passwordLogin"
+              label="Contraseña"
+              data-testid="login-password-input"
+            ></FormInput>
+            <Button text="Ingresar" className="btn btnStyleLogin"></Button>
+            <p>{errorLogin}</p>
+          </form>
+        </>
       )}
     </section>
   );
