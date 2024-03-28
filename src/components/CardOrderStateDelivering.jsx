@@ -1,36 +1,38 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react'
-import Button from './Button';
-import { faCheck, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { changeOrderToDelivered, deleteOrderPending } from '../helpers/axios';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import Button from "./Button";
+import { faCheck, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { changeOrderToDelivered, deleteOrderPending } from "../helpers/axios";
 
-const CardOrderStateDelivering = ({order, setorderListPending}) => {
-
-const sendToDelivered =  async() => {
-  console.log(order)
-  setorderListPending((currentState)=>{
-    const updateState = currentState.map( (theOrderState) => {
-      if( theOrderState.id === order.id && theOrderState.status === "delivering" ){
-        return {
-          ...theOrderState, status: "delivered"
+const CardOrderStateDelivering = ({ order, setorderListPending }) => {
+  const sendToDelivered = async () => {
+    setorderListPending((currentState) => {
+      const updateState = currentState.map((theOrderState) => {
+        if (
+          theOrderState.id === order.id &&
+          theOrderState.status === "delivering"
+        ) {
+          return {
+            ...theOrderState,
+            status: "delivered",
+          };
         }
-      }
-      return theOrderState
-    } )
-    return updateState
-  })
- await changeOrderToDelivered(order.id)
-}
+        return theOrderState;
+      });
+      return updateState;
+    });
+    await changeOrderToDelivered(order.id);
+  };
 
-const orderDeliveringDelete = async() => {
-  setorderListPending(( currentState )=>{
-    const updateDeleted = currentState.filter( (theOrderState) => {
-        return theOrderState.id !== order.id
-    })
-    return updateDeleted
-  })
-  await deleteOrderPending(order.id)
-}
+  const orderDeliveringDelete = async () => {
+    setorderListPending((currentState) => {
+      const updateDeleted = currentState.filter((theOrderState) => {
+        return theOrderState.id !== order.id;
+      });
+      return updateDeleted;
+    });
+    await deleteOrderPending(order.id);
+  };
 
   return (
     <>
@@ -50,14 +52,16 @@ const orderDeliveringDelete = async() => {
         <div className="divTime">
           <p>{order.dataEntry}</p>
         </div>
-        <div className='btnContOrderState'>
+        <div className="btnContOrderState">
           <div className="divCheck">
             <Button>
               <FontAwesomeIcon icon={faCheck} onClick={sendToDelivered} />
             </Button>
           </div>
-          <div className='divCheckRed'>
-              <Button onClick={orderDeliveringDelete}><FontAwesomeIcon icon={faTrashCan}/></Button>
+          <div className="divCheckRed">
+            <Button onClick={orderDeliveringDelete}>
+              <FontAwesomeIcon icon={faTrashCan} />
+            </Button>
           </div>
         </div>
       </div>
@@ -65,4 +69,4 @@ const orderDeliveringDelete = async() => {
   );
 };
 
-export default CardOrderStateDelivering
+export default CardOrderStateDelivering;
